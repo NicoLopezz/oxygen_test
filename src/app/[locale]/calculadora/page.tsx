@@ -752,11 +752,13 @@ export default function CalculadoraPage() {
                   }}
                   onMouseEnter={(e) => {
                     if (answers[question.id] !== option.value) {
+                      (e.currentTarget.style as any).backdropFilter = 'blur(8px)';
                       e.currentTarget.style.background = 'rgba(0, 202, 166, 0.5)';
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (answers[question.id] !== option.value) {
+                      (e.currentTarget.style as any).backdropFilter = 'blur(0px)';
                       e.currentTarget.style.background = 'rgba(0, 106, 106, 0.6)';
                     }
                   }}
@@ -882,13 +884,13 @@ export default function CalculadoraPage() {
                           background: 'rgba(0, 202, 166, 0)'
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.backdropFilter = 'blur(8px)';
+                          (e.currentTarget.style as any).backdropFilter = 'blur(8px)';
                           e.currentTarget.style.background = 'rgba(0, 202, 166, 0.1)';
                           e.currentTarget.style.color = '#006A6A';
                           e.currentTarget.style.transform = 'scale(1.05)';
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.backdropFilter = 'blur(0px)';
+                          (e.currentTarget.style as any).backdropFilter = 'blur(0px)';
                           e.currentTarget.style.background = 'rgba(0, 202, 166, 0)';
                           e.currentTarget.style.color = '#00CAA6';
                           e.currentTarget.style.transform = 'scale(1)';
@@ -1517,13 +1519,13 @@ export default function CalculadoraPage() {
                       background: 'rgba(255, 255, 255, 0)'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.backdropFilter = 'blur(8px)';
+                      (e.currentTarget.style as any).backdropFilter = 'blur(8px)';
                       e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
                       e.currentTarget.style.color = '#ffffff';
                       e.currentTarget.style.transform = 'scale(1.05)';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.backdropFilter = 'blur(0px)';
+                      (e.currentTarget.style as any).backdropFilter = 'blur(0px)';
                       e.currentTarget.style.background = 'rgba(255, 255, 255, 0)';
                       e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)';
                       e.currentTarget.style.transform = 'scale(1)';
